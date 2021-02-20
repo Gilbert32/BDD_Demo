@@ -16,10 +16,17 @@ namespace BDD_Demo.Services
             _context = context;
         }
 
-        public async Task<object> GetUser(int id)
+        public async Task<object> GetUser(long id)
         {
+            CheckUserExists(id);
             var user = await _context.Users.FirstOrDefaultAsync(x => x.Id == id);
-            return user != null ? new UserViewModel() {Name = user.Username, Email = user.Email} : throw new Exception("User Not found");
+            return new UserViewModel() {Name = user.Username, Email = user.Email};
+        }
+
+        public void CheckUserExists(long userId)
+        {
+            if (!_context.Users.Any(x => x.Id == userId))
+                throw new Exception("User Not Found");
         }
     }
 }

@@ -23,6 +23,7 @@ namespace BDD_Demo.API
             services.AddControllers();
             services.AddSwaggerGen();
             services.AddSingleton(typeof(UserService));
+            services.AddSingleton(typeof(TodoService));
             services.AddTransient(typeof(BddDemoContext));
         }
 
@@ -37,10 +38,7 @@ namespace BDD_Demo.API
             }
 
             // app.UseHttpsRedirection();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "TODO App API V1");
-            });
+            app.UseSwaggerUI(c => { c.SwaggerEndpoint("/swagger/v1/swagger.json", "TODO App API V1"); });
             app.UseRouting();
 
             app.UseAuthorization();
