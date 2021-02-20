@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD_Demo", "BDD_Demo\BDD_Demo.csproj", "{47CA01DE-9484-49AD-96BA-84CE89B9186E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD_Demo.API", "BDD_Demo.API\BDD_Demo.API.csproj", "{47CA01DE-9484-49AD-96BA-84CE89B9186E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,6 +1,6 @@
 using System;
 
-namespace BDD_Demo
+namespace BDD_Demo.API
 {
     public class WeatherForecast
     {
