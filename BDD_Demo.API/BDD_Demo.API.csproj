@@ -6,5 +6,13 @@
         <RootNamespace>BDD_Demo.API</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BDD_Demo.Services\BDD_Demo.Services.csproj" />
+    </ItemGroup>
+
 
 </Project>
