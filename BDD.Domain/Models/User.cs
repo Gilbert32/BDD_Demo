@@ -16,7 +16,7 @@ namespace BDD.Domain.Models
         public string Username { get; set; }
         public string Email { get; set; }
         public string Preferences { get; set; }
-        public bool? IsDeleted { get; set; }
+        public bool IsDeleted { get; set; }
 
         public virtual ICollection<Todo> Todos { get; set; }
     }
