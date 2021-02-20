@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using BDD_Demo.Services;
+using BDD_Demo.Services.Requests;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BDD_Demo.API.Controllers
@@ -23,6 +24,20 @@ namespace BDD_Demo.API.Controllers
             try
             {
                 return Ok(await _todoService.GetTodosByUser(id));
+            }
+            catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
+
+        [Route("AddTodo")]
+        [HttpPost]
+        public async Task<IActionResult> AddTodo([FromBody] AddTodoRequest request)
+        {
+            try
+            {
+                return Ok(await _todoService.AddTodo(request));
             }
             catch (Exception e)
             {
