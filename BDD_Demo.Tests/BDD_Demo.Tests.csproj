@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="FluentAssertions" Version="5.10.3" />
+      <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
+      <PackageReference Include="SpecFlow.xUnit" Version="3.7.13" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Hooks" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\BDD_Demo.API\BDD_Demo.API.csproj" />
+      <ProjectReference Include="..\BDD_Demo.Services\BDD_Demo.Services.csproj" />
+    </ItemGroup>
+
+</Project>
