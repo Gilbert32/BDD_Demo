@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace BDD.Domain.Models
+namespace BDD_Demo.Domain.Models
 {
     public partial class Todo
     {

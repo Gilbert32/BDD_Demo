@@ -1,11 +1,9 @@
-﻿using System;
+﻿using BDD_Demo.Domain.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
-using BDD.Domain.Models;
 
 #nullable disable
 
-namespace BDD.Domain.Contexts
+namespace BDD_Demo.Domain.Contexts
 {
     public partial class BddDemoContext : DbContext
     {

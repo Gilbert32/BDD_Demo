@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
-using BDD.Domain.Contexts;
-using BDD.Domain.Models;
+using BDD_Demo.Domain.Contexts;
+using BDD_Demo.Domain.Models;
 using BDD_Demo.Services.Requests;
 using BDD_Demo.Services.ViewModels;
 using Microsoft.EntityFrameworkCore;

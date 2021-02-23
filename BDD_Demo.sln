@@ -2,7 +2,7 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD_Demo.API", "BDD_Demo.API\BDD_Demo.API.csproj", "{47CA01DE-9484-49AD-96BA-84CE89B9186E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD.Domain", "BDD.Domain\BDD.Domain.csproj", "{E0D3A3AA-BC5E-4F50-B290-2F2C81741E0A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD_Demo.Domain", "BDD_Demo.Domain\BDD_Demo.Domain.csproj", "{E0D3A3AA-BC5E-4F50-B290-2F2C81741E0A}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD_Demo.Services", "BDD_Demo.Services\BDD_Demo.Services.csproj", "{5803CD74-25B3-46D0-81FF-1C4CA8505D9F}"
 EndProject

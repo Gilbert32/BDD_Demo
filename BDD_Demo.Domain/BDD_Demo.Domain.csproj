@@ -2,6 +2,8 @@
 
     <PropertyGroup>
         <TargetFramework>netcoreapp3.1</TargetFramework>
+        <AssemblyName>BDD_Demo.Domain</AssemblyName>
+        <RootNamespace>BDD_Demo.Domain</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
