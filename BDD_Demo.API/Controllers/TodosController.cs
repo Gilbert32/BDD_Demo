@@ -44,5 +44,19 @@ namespace BDD_Demo.API.Controllers
                 return Problem(e.Message);
             }
         }
+
+        [Route("CompleteTodo")]
+        [HttpPost]
+        public async Task<IActionResult> CompleteTodo([FromBody] CompleteTodoRequest request)
+        {
+            try
+            {
+                return Ok(await _todoService.CompleteTodo(request));
+            }
+            catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
     }
 }

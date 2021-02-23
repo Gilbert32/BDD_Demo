@@ -54,5 +54,26 @@ namespace BDD_Demo.Services
                 TargetDate = todo.TargetDate
             };
         }
+        public async Task<TodoViewModel> CompleteTodo(CompleteTodoRequest request)
+        {
+            var todo = _context.Todos.FirstOrDefault(x => x.Id == request.Id);
+            if (todo != null)
+                todo.IsComplete = true;
+            else
+            {
+                throw new Exception("Todo Not Found");
+            }
+            _context.Todos.Update(todo);
+            await _context.SaveChangesAsync();
+            return new TodoViewModel()
+            {
+                Id = todo.Id,
+                Text = todo.Text,
+                Title = todo.Title,
+                CreatedDate = todo.CreatedDate,
+                TargetDate = todo.TargetDate,
+                IsComplete = todo.IsComplete
+            };
+        }
     }
 }

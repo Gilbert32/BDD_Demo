@@ -43,6 +43,10 @@ namespace BDD.Domain.Contexts
 
                 entity.Property(e => e.IsDismissed).HasColumnName("IS_DISMISSED");
 
+                entity.Property(e => e.Text).HasColumnName("TEXT");
+
+                entity.Property(e => e.Title).HasColumnName("TITLE");
+
                 entity.Property(e => e.TodoId).HasColumnName("TODO_ID");
 
                 entity.HasOne(d => d.Todo)
@@ -64,6 +68,8 @@ namespace BDD.Domain.Contexts
                 entity.Property(e => e.DeletedDate)
                     .HasColumnType("timestamp with time zone")
                     .HasColumnName("DELETED_DATE");
+
+                entity.Property(e => e.IsComplete).HasColumnName("IS_COMPLETE");
 
                 entity.Property(e => e.IsDeleted).HasColumnName("IS_DELETED");
 

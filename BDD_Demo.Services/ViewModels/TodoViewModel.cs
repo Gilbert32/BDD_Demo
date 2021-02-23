@@ -9,5 +9,6 @@ namespace BDD_Demo.Services.ViewModels
         public string Text { get; set; }
         public DateTime? CreatedDate { get; set; }
         public DateTime? TargetDate { get; set; }
+        public bool IsComplete { get; set; }
     }
 }

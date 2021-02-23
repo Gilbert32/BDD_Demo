@@ -20,6 +20,7 @@ namespace BDD.Domain.Models
         public DateTime? DeletedDate { get; set; }
         public DateTime? TargetDate { get; set; }
         public long UserId { get; set; }
+        public bool IsComplete { get; set; }
 
         public virtual User User { get; set; }
         public virtual ICollection<Notification> Notifications { get; set; }

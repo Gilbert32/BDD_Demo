@@ -1,8 +1,11 @@
-﻿namespace BDD_Demo.Services.ViewModels
+﻿using System.Collections.Generic;
+
+namespace BDD_Demo.Services.ViewModels
 {
     public class UserViewModel
     {
         public string Name { get; set; }
         public string Email { get; set; }
+        public List<NotificationViewModel> Notifications { get; set; }
     }
 }
