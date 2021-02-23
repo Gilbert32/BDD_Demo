@@ -2,6 +2,7 @@ using BDD_Demo.Domain.Contexts;
 using BDD_Demo.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -22,8 +23,9 @@ namespace BDD_Demo.API
         {
             services.AddControllers();
             services.AddSwaggerGen();
-            services.AddSingleton(typeof(UserService));
-            services.AddSingleton(typeof(TodoService));
+            services.AddTransient(typeof(UserService));
+            services.AddTransient(typeof(TodoService));
+            services.AddDbContext<BddDemoContext>(options => options.UseInMemoryDatabase("bdd_demo"));
             services.AddTransient(typeof(BddDemoContext));
         }
 

@@ -33,7 +33,7 @@ namespace BDD_Demo.API.Controllers
 
         [Route("DismissNotification")]
         [HttpGet]
-        public async Task<IActionResult> DismissNotification([FromQuery] DismissNotificationRequest request)
+        public async Task<IActionResult> DismissNotification([FromBody] DismissNotificationRequest request)
         {
             try
             {
@@ -44,5 +44,20 @@ namespace BDD_Demo.API.Controllers
                 return Problem(e.Message);
             }
         }
+
+        [Route("AddUser")]
+        [HttpPost]
+        public async Task<IActionResult> AddUser([FromBody] AddUserRequest request)
+        {
+            try
+            {
+                return Ok(await _userService.AddUser(request));
+            }
+            catch (Exception e)
+            {
+                return Problem(e.Message);
+            }
+        }
+        
     }
 }

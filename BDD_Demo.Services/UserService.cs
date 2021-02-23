@@ -29,9 +29,12 @@ namespace BDD_Demo.Services
             UpdateNotificationsForUser(user.Id);
             return new UserViewModel()
             {
-                Name = user.Username, Email = user.Email,
+                Name = user.Username,
+                Email = user.Email,
+                Id = user.Id,
                 Notifications = _context.Notifications
-                    .Where(x => user.Todos.Select(t => t.Id).ToList().Contains(x.TodoId.Value) && x.IsDismissed == false)
+                    .Where(x => user.Todos.Select(t => t.Id).ToList().Contains(x.TodoId.Value) &&
+                                x.IsDismissed == false)
                     .ToList()
                     .Select(x =>
                         new NotificationViewModel()
@@ -85,6 +88,23 @@ namespace BDD_Demo.Services
                 Title = notification.Title,
                 Message = notification.Text,
                 IsDismissed = notification.IsDismissed.Value
+            };
+        }
+
+        public async Task<UserViewModel> AddUser(AddUserRequest request)
+        {
+            var user = new User()
+            {
+                Username = request.UserName,
+                Email = request.Email
+            };
+            await _context.Users.AddAsync(user);
+            await _context.SaveChangesAsync();
+            return new UserViewModel()
+            {
+                Id = user.Id,
+                Email = user.Email,
+                Name = user.Username
             };
         }
     }
