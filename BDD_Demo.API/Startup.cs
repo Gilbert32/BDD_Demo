@@ -25,7 +25,6 @@ namespace BDD_Demo.API
             services.AddSwaggerGen();
             services.AddTransient(typeof(UserService));
             services.AddTransient(typeof(TodoService));
-            services.AddDbContext<BddDemoContext>(options => options.UseInMemoryDatabase("bdd_demo"));
             services.AddTransient(typeof(BddDemoContext));
         }
 

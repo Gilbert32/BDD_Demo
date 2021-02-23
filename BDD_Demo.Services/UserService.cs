@@ -18,7 +18,7 @@ namespace BDD_Demo.Services
             _context = context;
         }
 
-        public async Task<object> GetUser(long id)
+        public async Task<UserViewModel> GetUser(long id)
         {
             // Check if the suer exists, and otherwise throw error
             CheckUserExists(id);
