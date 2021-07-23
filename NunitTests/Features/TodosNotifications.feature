@@ -21,4 +21,4 @@ Scenario: Notifications should not appear for Todos that have not reached their 
 Scenario: Notifications should work with x notifications
     Given a new user is added to the database with the username jiawei and the email jiawei@bmw.de
     When I have 2 new notifications
-    Then I expect to be able to see 2 notifications
+    Then I expect to be able to see 1 notifications
