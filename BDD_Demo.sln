@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD_Demo.Domain", "BDD_Demo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD_Demo.Services", "BDD_Demo.Services\BDD_Demo.Services.csproj", "{5803CD74-25B3-46D0-81FF-1C4CA8505D9F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BDD_Demo.Tests", "BDD_Demo.Tests\BDD_Demo.Tests.csproj", "{76A7B47B-47BC-4A98-B030-C6CBCB62AC2A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NunitTests", "NunitTests\NunitTests.csproj", "{C004FF07-1380-48C6-BF3A-0254F0EAE780}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,9 +26,9 @@ Global
 		{5803CD74-25B3-46D0-81FF-1C4CA8505D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5803CD74-25B3-46D0-81FF-1C4CA8505D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5803CD74-25B3-46D0-81FF-1C4CA8505D9F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{76A7B47B-47BC-4A98-B030-C6CBCB62AC2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76A7B47B-47BC-4A98-B030-C6CBCB62AC2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76A7B47B-47BC-4A98-B030-C6CBCB62AC2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76A7B47B-47BC-4A98-B030-C6CBCB62AC2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C004FF07-1380-48C6-BF3A-0254F0EAE780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C004FF07-1380-48C6-BF3A-0254F0EAE780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C004FF07-1380-48C6-BF3A-0254F0EAE780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C004FF07-1380-48C6-BF3A-0254F0EAE780}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -6,7 +6,7 @@ using BDD_Demo.Services.ViewModels;
 using FluentAssertions;
 using TechTalk.SpecFlow;
 
-namespace BDD_Demo.Tests.Steps
+namespace NunitTests.Steps
 {
     [Binding]
     public class TodosNotificationsTests
