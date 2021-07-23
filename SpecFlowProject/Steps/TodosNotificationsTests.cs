@@ -4,10 +4,9 @@ using BDD_Demo.Services;
 using BDD_Demo.Services.Requests;
 using BDD_Demo.Services.ViewModels;
 using FluentAssertions;
-using NUnit.Framework;
 using TechTalk.SpecFlow;
 
-namespace NunitTests.Steps
+namespace SpecFlowProject.Steps
 {
     [Binding]
     public class TodosNotificationsTests

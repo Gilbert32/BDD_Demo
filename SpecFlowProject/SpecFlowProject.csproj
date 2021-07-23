@@ -7,9 +7,12 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
         <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.8.35" />
-        <PackageReference Include="SpecFlow.NUnit" Version="3.8.14" />
-        <PackageReference Include="nunit" Version="3.13.2" />
-        <PackageReference Include="NUnit3TestAdapter" Version="4.0.0" />
+        <PackageReference Include="SpecFlow.xUnit" Version="3.8.14" />
+        <PackageReference Include="xunit" Version="2.4.1" />
+        <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
         <PackageReference Include="FluentAssertions" Version="5.10.3" />
     </ItemGroup>
 
@@ -18,6 +21,7 @@
         <CodeBehindFile>Features/TodosNotifications.feature.cs</CodeBehindFile>
       </SpecFlowFeatureFiles>
     </ItemGroup>
+
     <ItemGroup>
       <ProjectReference Include="..\BDD_Demo.Domain\BDD_Demo.Domain.csproj" />
       <ProjectReference Include="..\BDD_Demo.Services\BDD_Demo.Services.csproj" />

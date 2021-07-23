@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace NunitTests.Features
+namespace SpecFlowProject.Features
 {
     using TechTalk.SpecFlow;
     using System;
@@ -19,39 +19,41 @@ namespace NunitTests.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.8.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Todos can have Notifications")]
-    public partial class TodosCanHaveNotificationsFeature
+    public partial class TodosCanHaveNotificationsFeature : object, Xunit.IClassFixture<TodosCanHaveNotificationsFeature.FixtureData>, System.IDisposable
     {
         
-        private TechTalk.SpecFlow.ITestRunner testRunner;
+        private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private string[] _featureTags = ((string[])(null));
+        
+        private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
 #line 1 "TodosNotifications.feature"
 #line hidden
         
-        [NUnit.Framework.OneTimeSetUpAttribute()]
-        public virtual void FeatureSetup()
+        public TodosCanHaveNotificationsFeature(TodosCanHaveNotificationsFeature.FixtureData fixtureData, SpecFlowProject_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        {
+            this._testOutputHelper = testOutputHelper;
+            this.TestInitialize();
+        }
+        
+        public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
             TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "Todos can have Notifications", "    As a User,\n    I want to have notifications for my todos", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
-        [NUnit.Framework.OneTimeTearDownAttribute()]
-        public virtual void FeatureTearDown()
+        public static void FeatureTearDown()
         {
             testRunner.OnFeatureEnd();
             testRunner = null;
         }
         
-        [NUnit.Framework.SetUpAttribute()]
         public virtual void TestInitialize()
         {
         }
         
-        [NUnit.Framework.TearDownAttribute()]
         public virtual void TestTearDown()
         {
             testRunner.OnScenarioEnd();
@@ -60,7 +62,7 @@ namespace NunitTests.Features
         public virtual void ScenarioInitialize(TechTalk.SpecFlow.ScenarioInfo scenarioInfo)
         {
             testRunner.OnScenarioInitialize(scenarioInfo);
-            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<NUnit.Framework.TestContext>(NUnit.Framework.TestContext.CurrentContext);
+            testRunner.ScenarioContext.ScenarioContainer.RegisterInstanceAs<Xunit.Abstractions.ITestOutputHelper>(_testOutputHelper);
         }
         
         public virtual void ScenarioStart()
@@ -73,8 +75,14 @@ namespace NunitTests.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Notifications should appear for Todos that have reached their target dates")]
+        void System.IDisposable.Dispose()
+        {
+            this.TestTearDown();
+        }
+        
+        [Xunit.SkippableFactAttribute(DisplayName="Notifications should appear for Todos that have reached their target dates")]
+        [Xunit.TraitAttribute("FeatureTitle", "Todos can have Notifications")]
+        [Xunit.TraitAttribute("Description", "Notifications should appear for Todos that have reached their target dates")]
         public virtual void NotificationsShouldAppearForTodosThatHaveReachedTheirTargetDates()
         {
             string[] tagsOfScenario = ((string[])(null));
@@ -114,8 +122,10 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Notifications should not appear for Todos that have reached their target dates an" +
+        [Xunit.SkippableFactAttribute(DisplayName="Notifications should not appear for Todos that have reached their target dates an" +
+            "d are complete")]
+        [Xunit.TraitAttribute("FeatureTitle", "Todos can have Notifications")]
+        [Xunit.TraitAttribute("Description", "Notifications should not appear for Todos that have reached their target dates an" +
             "d are complete")]
         public virtual void NotificationsShouldNotAppearForTodosThatHaveReachedTheirTargetDatesAndAreComplete()
         {
@@ -160,8 +170,10 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Notifications should not appear for Todos that have not reached their target date" +
+        [Xunit.SkippableFactAttribute(DisplayName="Notifications should not appear for Todos that have not reached their target date" +
+            "")]
+        [Xunit.TraitAttribute("FeatureTitle", "Todos can have Notifications")]
+        [Xunit.TraitAttribute("Description", "Notifications should not appear for Todos that have not reached their target date" +
             "")]
         public virtual void NotificationsShouldNotAppearForTodosThatHaveNotReachedTheirTargetDate()
         {
@@ -203,8 +215,9 @@ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioCleanup();
         }
         
-        [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Notifications should work with x notifications")]
+        [Xunit.SkippableFactAttribute(DisplayName="Notifications should work with x notifications")]
+        [Xunit.TraitAttribute("FeatureTitle", "Todos can have Notifications")]
+        [Xunit.TraitAttribute("Description", "Notifications should work with x notifications")]
         public virtual void NotificationsShouldWorkWithXNotifications()
         {
             string[] tagsOfScenario = ((string[])(null));
@@ -242,6 +255,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line hidden
             }
             this.ScenarioCleanup();
+        }
+        
+        [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.8.0.0")]
+        [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
+        public class FixtureData : System.IDisposable
+        {
+            
+            public FixtureData()
+            {
+                TodosCanHaveNotificationsFeature.FeatureSetup();
+            }
+            
+            void System.IDisposable.Dispose()
+            {
+                TodosCanHaveNotificationsFeature.FeatureTearDown();
+            }
         }
     }
 }
